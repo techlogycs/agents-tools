@@ -7,15 +7,20 @@ description: >
 license: MIT
 metadata:
   author: GitHub Copilot
-  version: "1.0.0"
+  version: "1.1.0"
   sources:
     - TypeScript Handbook
     - TypeScript TSConfig reference
+    - TypeScript release notes
 ---
 
 # TypeScript Best Practices
 
 Generic guide for writing safer and more maintainable TypeScript. This first edition focuses on 4 documented rules that have large practical impact on day-to-day code quality.
+
+## Version Baseline
+
+This skill is aligned to the current stable TypeScript 5.x line. Guidance should prefer 5.x-era compiler behavior and TSConfig options, while treating 6.0 material as preview-only until it is stable.
 
 ## When to Apply
 

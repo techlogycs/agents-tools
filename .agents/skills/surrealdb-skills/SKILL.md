@@ -1,7 +1,7 @@
 ---
 name: surrealdb-skills
 description: >
-  Comprehensive SurrealDB 2.x guidelines for schema design, SurrealQL,
+  Comprehensive SurrealDB 3.x guidelines for schema design, SurrealQL,
   permissions, indexing, migrations, realtime features, and Rust, TypeScript,
   and React SDK usage.
   Use when designing, reviewing, or refactoring SurrealDB-backed systems.
@@ -9,13 +9,16 @@ description: >
 license: MIT
 metadata:
   author: GitHub Copilot
-  version: "1.0.0"
+  version: "1.1.0"
   sources:
     - SurrealDB documentation
+    - SurrealDB releases page
     - SurrealDB reference guide
     - SurrealDB performance best practices
     - SurrealDB schema creation best practices
     - SurrealDB Rust SDK documentation
+    - docs.rs surrealdb crate page
+    - docs.rs surrealdb-types crate page
     - SurrealDB JavaScript SDK documentation
     - SurrealDB JavaScript SDK React framework documentation
     - React useEffect documentation
@@ -27,7 +30,15 @@ metadata:
 
 # SurrealDB Best Practices
 
-Comprehensive guide for building production-grade SurrealDB 2.x systems with the Rust SDK and the official JavaScript SDK in TypeScript and React environments. This skill bundles rule documents for schema design, query safety, permissions, file storage buckets, migrations, performance, realtime features, and operational review.
+Comprehensive guide for building production-grade SurrealDB 3.x systems with the Rust SDK and the official JavaScript SDK in TypeScript and React environments. This skill bundles rule documents for schema design, query safety, permissions, file storage buckets, migrations, performance, realtime features, and operational review.
+
+## Version Baseline
+
+This skill is aligned to the current SurrealDB 3 major.
+
+- Server and Rust SDK baseline: `surrealdb = "3"`
+- Shared Rust value-type baseline: `surrealdb-types = "3"`
+- Migration note: treat 2.x guidance as legacy unless a rule explicitly calls out 2.x compatibility or migration behavior
 
 ## When to Apply
 

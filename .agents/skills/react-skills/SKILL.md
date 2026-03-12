@@ -7,15 +7,20 @@ description: >
 license: MIT
 metadata:
   author: GitHub Copilot
-  version: "1.0.0"
+  version: "1.1.0"
   sources:
     - React Learn
     - React Reference Rules
+    - React v19 release post
 ---
 
 # React Best Practices
 
 Generic guide for writing predictable, maintainable React components. This first edition focuses on 4 rules React documents as foundational for correct behavior.
+
+## Version Baseline
+
+This skill is intended for modern React 19 codebases. The rules remain broadly valid for React 18, but examples and review guidance should prefer current React 19 semantics where relevant.
 
 ## When to Apply
 

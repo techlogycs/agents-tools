@@ -7,15 +7,20 @@ description: >
 license: MIT
 metadata:
   author: GitHub Copilot
-  version: "1.0.0"
+  version: "1.1.0"
   sources:
     - Vite guide
     - Vite config reference
+    - Vite 7 release announcement
 ---
 
 # Vite Best Practices
 
 Generic guide for using Vite correctly in application and library projects. This first edition captures 4 rules that Vite explicitly documents and that frequently affect correctness in real projects.
+
+## Version Baseline
+
+This skill is aligned to Vite 7. When advice depends on runtime support or defaults, assume the Vite 7 baseline, including its ESM-only distribution and current major-version defaults.
 
 ## When to Apply
 

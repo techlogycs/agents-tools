@@ -8,14 +8,19 @@ description: >
 license: MIT
 metadata:
   author: GitHub Copilot
-  version: "1.0.0"
+  version: "1.1.0"
   sources:
     - Tailwind CSS docs
+    - Tailwind CSS v4 release post
 ---
 
 # Tailwind CSS Best Practices
 
 Generic guide for building maintainable Tailwind-based interfaces. This first edition focuses on 4 rules that Tailwind documents heavily because they shape how the framework detects classes and how styling should be expressed.
+
+## Version Baseline
+
+This skill is aligned to Tailwind CSS 4. Guidance should assume Tailwind's CSS-first configuration model, `@theme` tokens, and automatic source detection unless a project is explicitly pinned to an older major.
 
 ## When to Apply
 
