@@ -1,0 +1,58 @@
+name: Skills CI
+
+on:
+  pull_request:
+    paths:
+      - .agents/skills/**
+      - .github/scripts/add-skill.sh
+      - .github/scripts/audit-skills.sh
+      - .github/scripts/update-skills.sh
+      - .github/scripts/validate-skills.sh
+      - .github/workflows/skills-ci.yml
+      - Makefile
+      - skills-audit.json
+      - skills-lock.json
+  push:
+    paths:
+      - .agents/skills/**
+      - .github/scripts/add-skill.sh
+      - .github/scripts/audit-skills.sh
+      - .github/scripts/update-skills.sh
+      - .github/scripts/validate-skills.sh
+      - .github/workflows/skills-ci.yml
+      - Makefile
+      - skills-audit.json
+      - skills-lock.json
+  workflow_dispatch:
+
+jobs:
+  validate-skills:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate changed or all skills
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            ./.github/scripts/validate-skills.sh --changed "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}"
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            ./.github/scripts/validate-skills.sh --changed "${{ github.event.before }}" "${{ github.sha }}"
+          else
+            ./.github/scripts/validate-skills.sh --all
+          fi
+
+      - name: Verify skills audit
+        shell: bash
+        run: ./.github/scripts/audit-skills.sh --verify

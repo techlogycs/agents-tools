@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "skills": [
+    {"name":"premium-frontend-ui","source":"github/awesome-copilot","hasAssessment":true,"gen":"Safe","socket":"0 alerts","snyk":"Low Risk","critical":false}
+  ]
+}

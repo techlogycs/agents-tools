@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "premium-frontend-ui": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "2dcc7fe529ddad9b826fcc8ba43fb2357fc2919cc1d1cb5aaa6bcb434d872f9c"
+    },
+    "surrealdb-expert": {
+      "source": "martinholovsky/claude-skills-generator",
+      "sourceType": "github",
+      "computedHash": "193e7e210b4db1842cc5ae0d040ce1492d82371ab648a82821ea6ec91d9cbc65"
+    },
+    "svelte-code-writer": {
+      "source": "sveltejs/ai-tools",
+      "sourceType": "github",
+      "computedHash": "9de149d0962f92a69d113860abb15e90121aac6b5cf36f172c7fbc9ec434fbde"
+    },
+    "svelte-core-bestpractices": {
+      "source": "sveltejs/ai-tools",
+      "sourceType": "github",
+      "computedHash": "c8d06af9aebd44a4f849958c19d65596ca4888479cfaf3dfd27050c81f27a6ec"
+    },
+    "typescript-expert": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "136deef983dfdd5f312e6fe0850fc4e87400f3ddce7a8ee9082c426e958e83f0"
+    }
+  }
+}
