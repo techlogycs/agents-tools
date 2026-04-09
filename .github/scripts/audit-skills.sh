@@ -55,7 +55,7 @@ audit_skill_json() {
   if ! (
     cd "$temp_dir"
     npx --yes skills add "$source" --skill "$skill_name" --agent github-copilot -y --copy
-  ) >"$output_file" 2>&1; then
+  ) < /dev/null >"$output_file" 2>&1; then
     cat "$output_file" >&2
     rm -rf "$temp_dir"
     fail "Audit install failed for $skill_name from $source"
